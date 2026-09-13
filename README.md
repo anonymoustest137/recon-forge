@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🔎 recon-forge
+# recon-forge
 
 **Modular async reconnaissance framework with self-contained HTML reporting.**
 
@@ -14,7 +14,7 @@
 
 ---
 
-## 📖 What is this?
+## What is this?
 
 **recon-forge is a reconnaissance tool.** Reconnaissance ("recon") is the first phase of any
 authorized security assessment: before you can test whether a company's systems are secure,
@@ -50,7 +50,7 @@ concurrently, and outputs a single HTML file you can hand to a client or attach 
 
 ---
 
-## ⚙️ How it works
+## How it works
 
 The pipeline has four stages. Every stage is concurrent, which is where the speed comes from.
 
@@ -64,9 +64,9 @@ A hostname that resolves to an IP address exists. One that doesn't, doesn't. Thi
 *passive* — you're only asking DNS servers a question, not touching the target's systems.
 
 ```
-www.example.com     -> 93.184.216.34   ✓ exists
-api.example.com     -> 93.184.216.35   ✓ exists
-notreal.example.com -> NXDOMAIN        ✗ skipped
+www.example.com     -> 93.184.216.34    exists
+api.example.com     -> 93.184.216.35    exists
+notreal.example.com -> NXDOMAIN         skipped
 ```
 
 Concurrency is bounded by an `asyncio.Semaphore` (default 50) so you don't exhaust file
@@ -120,7 +120,7 @@ or images. One file you can email, archive, or open on a machine with no interne
 
 ---
 
-## 🚀 Install
+## Install
 
 ```bash
 git clone https://github.com/anonymoustest137/recon-forge.git
@@ -133,7 +133,7 @@ standard library. `pip install` is only needed if you want to run the tests.
 
 ---
 
-## 💻 Usage
+## Usage
 
 ```bash
 # scan a domain you are authorized to test
@@ -170,7 +170,7 @@ That `dev` box with MySQL on 3306 and SSH open is exactly the kind of finding th
 
 ---
 
-## 🗂️ Project structure
+## Project structure
 
 | Path | Purpose |
 |---|---|
@@ -197,7 +197,7 @@ asyncio.run(main())
 
 ---
 
-## 🧪 Tests
+## Tests
 
 ```bash
 pytest -q
@@ -207,7 +207,7 @@ CI runs the suite against Python 3.10 and 3.12 on every push.
 
 ---
 
-## ⚠️ Legal & ethical use
+## Legal & ethical use
 
 **Only scan systems you own or have explicit written permission to test.**
 
@@ -220,7 +220,7 @@ assessment work, not for stealth.
 
 ---
 
-## 🗺️ Roadmap
+## Roadmap
 
 - [ ] Certificate transparency log ingestion for passive subdomain discovery
 - [ ] Custom wordlist support via `-w`
@@ -230,7 +230,7 @@ assessment work, not for stealth.
 
 ---
 
-## 📄 License
+## License
 
 MIT — see [LICENSE](LICENSE).
 
@@ -240,6 +240,6 @@ MIT — see [LICENSE](LICENSE).
 
 Built by [@anonymoustest137](https://github.com/anonymoustest137) · [Portfolio](https://anonymoustest137.github.io/anonymoustest137/)
 
-⚠️ *For educational and authorized testing purposes only.*
+ *For educational and authorized testing purposes only.*
 
 </div>
